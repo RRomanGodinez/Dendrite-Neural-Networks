@@ -1,0 +1,56 @@
+# Dendrite-Neural-Networks
+
+Dendrite-Neural-Networks is a Python library for dealing with closed boundary classification units, like Dendrite Morphological Neuron (DMN), Dendrite Ellipsoidal Neuron (DEN) and Dendrite Spherical Neuron (DSN).
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Dendrite-Neural-Networks.
+
+```bash
+pip install Dendrite-Neural-Networks
+```
+
+## Usage
+
+```python
+from DEN import DENlayer
+from DMN import DMNlayer
+from DSN import DSNlayer
+
+from PreTrain.HpC import HSpC
+from PreTrain.HpC import HEpC
+from PreTrain.HpC import HBpC
+
+from PreTrain.kmeans import bkmeans
+from PreTrain.kmeans import ekmeans
+from PreTrain.kmeans import skmeans
+
+# returns 'array' with the propose initial parameters
+#x: Input pattern
+#y: Labels
+dendrites  = HBpC.HBpC(x,y,0.0001)
+dendrites  = HEpC.HEpC(x,y)
+dendrites  = HSpC.HSpC(x,y,0.0001)
+dendrites  = bkmeans.bkmeans(x,y,[3,3,3],0.01)
+dendrites  = ekmeans.ekmeans(x,y,[3])
+dendrites  = skmeans.skmeans(x,y,[2],0.01)
+
+
+# It's an implementation of a modified Keras layer
+DMNlayer(2,dendrites, activation = "sigmoid", input_shape = (np.shape(x)[1],)))
+DENlayer(2,dendrites, activation = "sigmoid", input_shape = (np.shape(x)[1],)))
+DSNlayer(2,dendrites, activation = "sigmoid", input_shape = (np.shape(x)[1],)))
+
+# It's an implementation of a modified Keras layer. For random initialization of parameters
+DMNlayer(2, activation = "sigmoid", input_shape = (np.shape(x)[1],)))
+DENlayer(2, activation = "sigmoid", input_shape = (np.shape(x)[1],)))
+DSNlayer(2, activation = "sigmoid", input_shape = (np.shape(x)[1],)))
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
