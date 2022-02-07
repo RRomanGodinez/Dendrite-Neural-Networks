@@ -20,7 +20,7 @@ def ekmeans(x_train, y_train, ellipses):
         kmeans = KMeans(init = 'k-means++', n_clusters = c_num, n_init = 10, max_iter = 100)
         kmeans.fit(x)
         centroids = np.reshape(kmeans.cluster_centers_, (c_num, 1, np.shape(x_train)[1]))
-        print("centroid:",centroids)
+        #print("centroid:",centroids)
         pattern_labels = kmeans.labels_ 
         clusters = np.unique(pattern_labels)
         covariances = np.zeros((c_num, np.shape(x_train)[1], np.shape(x_train)[1]))
@@ -30,7 +30,7 @@ def ekmeans(x_train, y_train, ellipses):
             indices = np.where(cluster == pattern_labels)[0]
             covariances[cluster] = np.cov(x[indices, :].T)
 
-        print("Covariances:",covariances)
+        #print("Covariances:",covariances)
 
         if counter == 0:
             covariances_arr = covariances

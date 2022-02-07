@@ -24,14 +24,14 @@ def bkmeans(x_train, y_train, boxes, eps=0.05):
         kmeans.fit(x)
         pattern_labels = kmeans.labels_ 
         clusters = np.unique(pattern_labels)
-        print("Clusters n",clusters)
+        #print("Clusters n",clusters)
                     
         for cluster in clusters:
            
             indices = np.where(cluster == pattern_labels)[0]
             cluster_points = x[indices,:]
-            print("clusters",cluster_points)
-            print("Dimensiones",len(cluster_points[0]))
+            #print("clusters",cluster_points)
+            #print("Dimensiones",len(cluster_points[0]))
             
             
             for d in range(len(cluster_points[0])):

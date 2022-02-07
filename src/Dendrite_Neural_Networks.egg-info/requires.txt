@@ -1,0 +1,4 @@
+Keras>=2.4.3
+Tensorflow>=2.3
+Numpy>=1.20.1
+Scikit-learn>=0.24.1

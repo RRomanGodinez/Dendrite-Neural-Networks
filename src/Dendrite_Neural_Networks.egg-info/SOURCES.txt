@@ -1,3 +1,4 @@
+README.md
 setup.py
 src/DEN.py
 src/DMN.py
@@ -5,6 +6,7 @@ src/DSN.py
 src/Dendrite_Neural_Networks.egg-info/PKG-INFO
 src/Dendrite_Neural_Networks.egg-info/SOURCES.txt
 src/Dendrite_Neural_Networks.egg-info/dependency_links.txt
+src/Dendrite_Neural_Networks.egg-info/requires.txt
 src/Dendrite_Neural_Networks.egg-info/top_level.txt
 src/PreTrain/HpC/HBpC.py
 src/PreTrain/HpC/HEpC.py
