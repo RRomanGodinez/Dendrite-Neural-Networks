@@ -4,7 +4,7 @@
 # In[6]:
 
 
-from keras.engine.topology import Layer
+from tensorflow.keras.layers import Layer
 from keras import activations
 from keras.initializers import RandomUniform
 from keras import backend as K
@@ -41,7 +41,7 @@ class DSNlayer(Layer):
         
             self.radius = self.add_weight(name = 'Radius', 
                                       shape = (self.spheres,1),
-                                      initializer = RandomUniform(minval=-1, maxval=1, seed=None),
+                                      initializer = RandomUniform(minval=0, maxval=1, seed=None),
                                       trainable = True)
            
             
@@ -74,7 +74,7 @@ class DSNlayer(Layer):
         distance = tf.norm(dif,axis=2)
       
         
-        output=self.radius-(distance)
+        output=abs(self.radius)-(distance)
         output = K.permute_dimensions(output, (1, 0))
         
         if self.activation is not None:
