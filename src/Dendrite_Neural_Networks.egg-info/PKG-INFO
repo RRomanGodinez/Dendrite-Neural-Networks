@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: Dendrite-Neural-Networks
-Version: 0.0.5
+Version: 0.0.6
 Summary: Dendrite-Neural-Networks is an implementation of processing units that performed classification using closed decision boundaries with only one neuron.
 Home-page: https://github.com/RRomanGodinez/Dendrite-Neural-Networks
 Author: Rodrigo Román Godínez.

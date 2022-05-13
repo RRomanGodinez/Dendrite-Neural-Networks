@@ -4,7 +4,7 @@
 # In[4]:
 
 
-from keras.engine.topology import Layer
+from tensorflow.keras.layers import Layer
 from keras import backend as K
 from keras import initializers
 from keras.initializers import RandomUniform

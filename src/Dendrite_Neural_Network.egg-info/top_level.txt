@@ -1,4 +1,0 @@
-DEN
-DMN
-DSN
-PreTrain

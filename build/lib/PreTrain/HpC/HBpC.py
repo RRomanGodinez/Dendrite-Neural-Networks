@@ -29,8 +29,7 @@ def HBpC(P,T,M=0):
     counter = 0
     
     if (len(classes)<=2 and len(classes)>0):
-        print("Estamos dentro")
-        print(classes)
+        
         for c in range(1):
             indexClasses = np.where(T==c)[0]
             
@@ -39,7 +38,7 @@ def HBpC(P,T,M=0):
             Pclass = P[indexClasses]
                       
             Wmin,Wmax = generateWB(Pclass,M)
-            print("Wmin:",Wmin,"Wmax:",Wmax)
+            
             
             if counter == 0:
                 Wmin_arr = Wmin
@@ -61,7 +60,7 @@ def HBpC(P,T,M=0):
             Pclass = P[indexClasses]
                       
             Wmin,Wmax = generateWB(Pclass,M)
-            print("Wmin:",Wmin,"Wmax:",Wmax)
+           
             
             if counter == 0:
                 Wmin_arr = Wmin

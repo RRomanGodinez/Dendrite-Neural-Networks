@@ -6,7 +6,7 @@ with open("README.md","r") as fh:
 
 setup(
     name = 'Dendrite Neural Networks',
-    version = '0.0.5',
+    version = '0.0.6',
     description = 'Dendrite-Neural-Networks is an implementation of processing units that performed classification using closed decision boundaries with only one neuron.',
     py_modules = ["DMN","DEN","DSN","PreTrain.HpC.HBpC","PreTrain.HpC.HEpC","PreTrain.HpC.HSpC", "PreTrain.kmeans.bkmeans","PreTrain.kmeans.ekmeans","PreTrain.kmeans.skmeans"],
     packages = find_packages(),
